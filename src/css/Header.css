@@ -1,0 +1,141 @@
+.header{
+    width: max(10vw, 200px);
+    height: 100vh;
+    background-color: var(--theme-header-bg);
+    color: var(--theme-color);
+    font-family: 'Victor Mono';
+    padding: 30px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: flex-start;
+    transition: all 0.5s ease-in-out;
+    position: sticky;
+    top: 0;
+}
+
+.theme-change-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    padding: 7px;
+}
+
+.theme-change-btn > #theme-toggle-switch{
+    width: 60px;
+    height: 28px;
+    background-color: var(--theme-color);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    padding: 4px;
+    align-items: center;
+}
+
+.theme-change-btn > #theme-toggle-switch > #roller{
+    width: 23px;
+    height: 23px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: var(--theme-header-bg);
+    border-radius: 50%;
+}
+
+.header .theme-change-btn > img{
+    width: 25px;
+    height: 25px;
+}
+
+#main-flexbox.light > .header > .theme-change-btn > img{
+    filter: var(--theme-svg-base);
+}
+
+#main-flexbox.light > .header > .theme-change-btn > #theme-toggle-switch{
+    flex-direction: row-reverse;
+    transition: all 0.5s ease-in-out;
+}
+
+.header.collapsed > .theme-change-btn > #theme-toggle-switch{
+    gap: 0;
+    opacity: 0;
+    width: 0;
+    padding: 0;
+    transition: all 0.3s ease-out
+}
+
+.header > .header-button{
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    transition: gap 0.5s ease-out;
+    cursor: pointer;
+}
+
+.header.collapsed > .header-button > span{
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease-out;
+}
+
+.header.collapsed > .header-button{
+    transition: gap 0.1s ease-in;
+    gap: 0;
+}
+
+.header > .header-button:hover{
+    background-color: var(--theme-color);
+    transition: all 0.2s ease-in;
+}
+
+.header > .header-button:hover > img{
+    filter: var(--theme-svg-inversion);
+    transition: all 0.15s ease-in;
+}
+
+.header > .header-button:hover > span{
+    color: var(--theme-bg);
+}
+
+.header .header-button > img{
+    width: 20px;
+    height: 20px;
+    filter: var(--theme-svg-base)
+}
+
+.header .header-button > span{
+    border-bottom: 1px solid rgb(68, 68, 68);
+    color: var(--theme-color);
+    transition: 0.7s ease-in 0.2s;
+    transition-property: width, opacity;
+}
+
+.header > .collapse-expand-button{
+    width: 4vh;
+    height: 4vh;
+    display: flex;
+    padding: 10px;
+    margin: 20px 0 30px 0px;
+    filter: var(--theme-svg-base)
+}
+
+.header > .collapse-expand-button > img{
+    width: 20px;
+    height: 20px;
+    align-self: flex-start;
+}
+
+.header.collapsed{
+    width: 7vh;
+    padding-left: 10px;
+}
+
+#collapse-expand-svg{
+    display: block;
+    padding: 20%;
+}
+

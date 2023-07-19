@@ -1,0 +1,31 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+#main-flexbox{
+    display: flex;
+    flex-direction: row;
+    --theme-bg: rgb(41, 41, 41);
+    --theme-color: aliceblue;
+    --theme-bg-glass: rgba(0, 0, 0, 0.24);
+    --theme-header-bg: rgb(19, 19, 20);
+    --theme-svg-inversion: invert(100);
+    --theme-svg-base: invert(0);
+    --theme-accent-color: rgb(144, 144, 156);
+    --theme-highlight-color: goldenrod;
+} 
+
+#main-flexbox.light{
+    --theme-bg: aliceblue;
+    --theme-color: black;
+    --theme-bg-glass: rgba(255, 255, 255, 0.24);
+    --theme-header-bg: rgb(190, 190, 190);
+    --theme-svg-inversion: invert(0);
+    --theme-svg-base: invert(100);
+    --theme-accent-color: rgb(135, 135, 146);
+    --theme-highlight-color: goldenrod;
+}
+
+#main-flexbox *{
+    transition: all 0.5s ease-in-out;
+}
